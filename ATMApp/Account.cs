@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace ATMApp
 {
     public partial class Account : Form
     {
-
-        Connection Koneksi = new Connection();
 
         public Account()
         {
@@ -20,7 +13,7 @@ namespace ATMApp
        
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection Conn = Koneksi.getConn();
+            SqlConnection Conn = Connection.getConn();
 
             int bal = 0;
             if(AccNumTb.Text == "" ||NameTb.Text == "" || FaNameTb.Text == "" || PhoneTb.Text == "" || AddressTb.Text == "" || OccupationTb.Text == "" || PinTb.Text == "")

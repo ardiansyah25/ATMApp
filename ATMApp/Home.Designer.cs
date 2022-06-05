@@ -30,23 +30,24 @@ namespace ATMApp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.ExitTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DepositBtn = new System.Windows.Forms.Button();
+            this.WdBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.ChangePinBtn = new System.Windows.Forms.Button();
+            this.BalanceBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LogoutTxt = new System.Windows.Forms.Label();
+            this.AccNumTxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.ExitTxt);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -54,53 +55,56 @@ namespace ATMApp
             this.panel1.Size = new System.Drawing.Size(709, 100);
             this.panel1.TabIndex = 1;
             // 
-            // label6
+            // ExitTxt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(665, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 40);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "X";
+            this.ExitTxt.AutoSize = true;
+            this.ExitTxt.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExitTxt.ForeColor = System.Drawing.Color.White;
+            this.ExitTxt.Location = new System.Drawing.Point(665, 7);
+            this.ExitTxt.Name = "ExitTxt";
+            this.ExitTxt.Size = new System.Drawing.Size(37, 40);
+            this.ExitTxt.TabIndex = 10;
+            this.ExitTxt.Text = "X";
+            this.ExitTxt.Click += new System.EventHandler(this.ExitTxt_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(129, 27);
+            this.label1.Location = new System.Drawing.Point(118, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(464, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select your Transaction Please";
             // 
-            // button1
+            // DepositBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 42);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "DEPOSIT";
-            this.button1.UseVisualStyleBackColor = false;
+            this.DepositBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.DepositBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DepositBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DepositBtn.ForeColor = System.Drawing.Color.White;
+            this.DepositBtn.Location = new System.Drawing.Point(38, 183);
+            this.DepositBtn.Name = "DepositBtn";
+            this.DepositBtn.Size = new System.Drawing.Size(218, 42);
+            this.DepositBtn.TabIndex = 11;
+            this.DepositBtn.Text = "DEPOSIT";
+            this.DepositBtn.UseVisualStyleBackColor = false;
+            this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 
-            // button2
+            // WdBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(442, 140);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 42);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "WITHDRAW";
-            this.button2.UseVisualStyleBackColor = false;
+            this.WdBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.WdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WdBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WdBtn.ForeColor = System.Drawing.Color.White;
+            this.WdBtn.Location = new System.Drawing.Point(435, 183);
+            this.WdBtn.Name = "WdBtn";
+            this.WdBtn.Size = new System.Drawing.Size(218, 42);
+            this.WdBtn.TabIndex = 12;
+            this.WdBtn.Text = "WITHDRAW";
+            this.WdBtn.UseVisualStyleBackColor = false;
+            this.WdBtn.Click += new System.EventHandler(this.WdBtn_Click);
             // 
             // button3
             // 
@@ -108,7 +112,7 @@ namespace ATMApp
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(45, 228);
+            this.button3.Location = new System.Drawing.Point(38, 271);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(218, 42);
             this.button3.TabIndex = 13;
@@ -121,77 +125,93 @@ namespace ATMApp
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(442, 228);
+            this.button4.Location = new System.Drawing.Point(435, 271);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(218, 42);
             this.button4.TabIndex = 14;
             this.button4.Text = "MINI STATEMENT";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // ChangePinBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(45, 320);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(218, 42);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "CHANGE PIN";
-            this.button5.UseVisualStyleBackColor = false;
+            this.ChangePinBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ChangePinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangePinBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ChangePinBtn.ForeColor = System.Drawing.Color.White;
+            this.ChangePinBtn.Location = new System.Drawing.Point(38, 363);
+            this.ChangePinBtn.Name = "ChangePinBtn";
+            this.ChangePinBtn.Size = new System.Drawing.Size(218, 42);
+            this.ChangePinBtn.TabIndex = 15;
+            this.ChangePinBtn.Text = "CHANGE PIN";
+            this.ChangePinBtn.UseVisualStyleBackColor = false;
+            this.ChangePinBtn.Click += new System.EventHandler(this.ChangePinBtn_Click);
             // 
-            // button6
+            // BalanceBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(442, 320);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(218, 42);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "BALANCE";
-            this.button6.UseVisualStyleBackColor = false;
+            this.BalanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BalanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BalanceBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BalanceBtn.ForeColor = System.Drawing.Color.White;
+            this.BalanceBtn.Location = new System.Drawing.Point(435, 363);
+            this.BalanceBtn.Name = "BalanceBtn";
+            this.BalanceBtn.Size = new System.Drawing.Size(218, 42);
+            this.BalanceBtn.TabIndex = 16;
+            this.BalanceBtn.Text = "BALANCE";
+            this.BalanceBtn.UseVisualStyleBackColor = false;
+            this.BalanceBtn.Click += new System.EventHandler(this.BalanceBtn_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 479);
+            this.panel2.Location = new System.Drawing.Point(0, 509);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(709, 18);
             this.panel2.TabIndex = 17;
             // 
-            // label5
+            // LogoutTxt
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label5.Location = new System.Drawing.Point(299, 395);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 29);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "LOGOUT";
+            this.LogoutTxt.AutoSize = true;
+            this.LogoutTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LogoutTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.LogoutTxt.Location = new System.Drawing.Point(292, 438);
+            this.LogoutTxt.Name = "LogoutTxt";
+            this.LogoutTxt.Size = new System.Drawing.Size(106, 29);
+            this.LogoutTxt.TabIndex = 18;
+            this.LogoutTxt.Text = "LOGOUT";
+            this.LogoutTxt.Click += new System.EventHandler(this.LogoutTxt_Click);
+            // 
+            // AccNumTxt
+            // 
+            this.AccNumTxt.AutoSize = true;
+            this.AccNumTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AccNumTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.AccNumTxt.Location = new System.Drawing.Point(225, 115);
+            this.AccNumTxt.Name = "AccNumTxt";
+            this.AccNumTxt.Size = new System.Drawing.Size(250, 29);
+            this.AccNumTxt.TabIndex = 11;
+            this.AccNumTxt.Text = "Account Number: xxxx";
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 497);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(709, 527);
+            this.Controls.Add(this.AccNumTxt);
+            this.Controls.Add(this.LogoutTxt);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.BalanceBtn);
+            this.Controls.Add(this.ChangePinBtn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.WdBtn);
+            this.Controls.Add(this.DepositBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,15 +222,17 @@ namespace ATMApp
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ExitTxt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DepositBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button ChangePinBtn;
+        private System.Windows.Forms.Button BalanceBtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LogoutTxt;
+        private System.Windows.Forms.Label AccNumTxt;
+        private System.Windows.Forms.Button WdBtn;
     }
 }

@@ -5,9 +5,9 @@ using System.Data.SqlClient;
 
 namespace ATMApp
 {
-    class Connection
+    static class Connection
     {
-        public SqlConnection getConn()
+        public static SqlConnection getConn()
         {
             SqlConnection Conn = new SqlConnection();
             Conn.ConnectionString = "Data Source=DESKTOP-B46N893;Initial Catalog=ATMAPP;Integrated Security=True";

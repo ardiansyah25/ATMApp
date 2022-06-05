@@ -30,15 +30,15 @@ namespace ATMApp
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BackTxt = new System.Windows.Forms.Label();
+            this.WdBtn = new System.Windows.Forms.Button();
+            this.AmountTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.ExitTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.AvailBalanceTxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,50 +47,51 @@ namespace ATMApp
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(269, 111);
+            this.label2.Location = new System.Drawing.Point(257, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 29);
             this.label2.TabIndex = 47;
             this.label2.Text = "WITHDRAW";
             // 
-            // label7
+            // BackTxt
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label7.Location = new System.Drawing.Point(345, 344);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 29);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "LOGOUT";
+            this.BackTxt.AutoSize = true;
+            this.BackTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BackTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.BackTxt.Location = new System.Drawing.Point(331, 380);
+            this.BackTxt.Name = "BackTxt";
+            this.BackTxt.Size = new System.Drawing.Size(66, 29);
+            this.BackTxt.TabIndex = 51;
+            this.BackTxt.Text = "Back";
+            this.BackTxt.Click += new System.EventHandler(this.BackTxt_Click);
             // 
-            // button1
+            // WdBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(296, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 42);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "DEPOSIT";
-            this.button1.UseVisualStyleBackColor = false;
+            this.WdBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.WdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WdBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WdBtn.ForeColor = System.Drawing.Color.White;
+            this.WdBtn.Location = new System.Drawing.Point(296, 280);
+            this.WdBtn.Name = "WdBtn";
+            this.WdBtn.Size = new System.Drawing.Size(188, 42);
+            this.WdBtn.TabIndex = 50;
+            this.WdBtn.Text = "WITHDRAW";
+            this.WdBtn.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // AmountTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(296, 215);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 33);
-            this.textBox1.TabIndex = 49;
+            this.AmountTb.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AmountTb.Location = new System.Drawing.Point(296, 224);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(268, 33);
+            this.AmountTb.TabIndex = 49;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(169, 220);
+            this.label3.Location = new System.Drawing.Point(169, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 26);
             this.label3.TabIndex = 48;
@@ -99,7 +100,7 @@ namespace ATMApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.ExitTxt);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -107,16 +108,17 @@ namespace ATMApp
             this.panel1.Size = new System.Drawing.Size(673, 100);
             this.panel1.TabIndex = 52;
             // 
-            // label6
+            // ExitTxt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(633, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 40);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "X";
+            this.ExitTxt.AutoSize = true;
+            this.ExitTxt.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExitTxt.ForeColor = System.Drawing.Color.White;
+            this.ExitTxt.Location = new System.Drawing.Point(633, 4);
+            this.ExitTxt.Name = "ExitTxt";
+            this.ExitTxt.Size = new System.Drawing.Size(37, 40);
+            this.ExitTxt.TabIndex = 10;
+            this.ExitTxt.Text = "X";
+            this.ExitTxt.Click += new System.EventHandler(this.ExitTxt_Click);
             // 
             // label1
             // 
@@ -133,39 +135,40 @@ namespace ATMApp
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 389);
+            this.panel2.Location = new System.Drawing.Point(0, 445);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(673, 18);
             this.panel2.TabIndex = 53;
             // 
-            // label4
+            // AvailBalanceTxt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(221, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(241, 29);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "AVAILABLE BALANCE";
+            this.AvailBalanceTxt.AutoSize = true;
+            this.AvailBalanceTxt.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AvailBalanceTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.AvailBalanceTxt.Location = new System.Drawing.Point(209, 161);
+            this.AvailBalanceTxt.Name = "AvailBalanceTxt";
+            this.AvailBalanceTxt.Size = new System.Drawing.Size(237, 21);
+            this.AvailBalanceTxt.TabIndex = 54;
+            this.AvailBalanceTxt.Text = "AVAILABLE BALANCE: Rp.xxxx";
             // 
             // Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 407);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(673, 463);
+            this.Controls.Add(this.AvailBalanceTxt);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BackTxt);
+            this.Controls.Add(this.WdBtn);
+            this.Controls.Add(this.AmountTb);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Withdraw";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Withdraw";
+            this.Load += new System.EventHandler(this.Withdraw_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -185,5 +188,10 @@ namespace ATMApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label BackTxt;
+        private System.Windows.Forms.Button WdBtn;
+        private System.Windows.Forms.TextBox AmountTb;
+        private System.Windows.Forms.Label ExitTxt;
+        private System.Windows.Forms.Label AvailBalanceTxt;
     }
 }

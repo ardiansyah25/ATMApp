@@ -30,12 +30,12 @@ namespace ATMApp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.ExitTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BackTxt = new System.Windows.Forms.Label();
+            this.DepositBtn = new System.Windows.Forms.Button();
+            this.AmountTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -44,7 +44,7 @@ namespace ATMApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.ExitTxt);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -52,16 +52,17 @@ namespace ATMApp
             this.panel1.Size = new System.Drawing.Size(673, 100);
             this.panel1.TabIndex = 2;
             // 
-            // label6
+            // ExitTxt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(633, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 40);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "X";
+            this.ExitTxt.AutoSize = true;
+            this.ExitTxt.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExitTxt.ForeColor = System.Drawing.Color.White;
+            this.ExitTxt.Location = new System.Drawing.Point(633, 0);
+            this.ExitTxt.Name = "ExitTxt";
+            this.ExitTxt.Size = new System.Drawing.Size(37, 40);
+            this.ExitTxt.TabIndex = 10;
+            this.ExitTxt.Text = "X";
+            this.ExitTxt.Click += new System.EventHandler(this.ExitTxt_Click);
             // 
             // label1
             // 
@@ -83,45 +84,47 @@ namespace ATMApp
             this.panel2.Size = new System.Drawing.Size(673, 18);
             this.panel2.TabIndex = 36;
             // 
-            // label7
+            // BackTxt
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label7.Location = new System.Drawing.Point(341, 317);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 29);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "LOGOUT";
+            this.BackTxt.AutoSize = true;
+            this.BackTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BackTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.BackTxt.Location = new System.Drawing.Point(290, 317);
+            this.BackTxt.Name = "BackTxt";
+            this.BackTxt.Size = new System.Drawing.Size(74, 29);
+            this.BackTxt.TabIndex = 46;
+            this.BackTxt.Text = "BACK";
+            this.BackTxt.Click += new System.EventHandler(this.BackTxt_Click);
             // 
-            // button1
+            // DepositBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(292, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 42);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "DEPOSIT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.DepositBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.DepositBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DepositBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DepositBtn.ForeColor = System.Drawing.Color.White;
+            this.DepositBtn.Location = new System.Drawing.Point(292, 235);
+            this.DepositBtn.Name = "DepositBtn";
+            this.DepositBtn.Size = new System.Drawing.Size(181, 42);
+            this.DepositBtn.TabIndex = 45;
+            this.DepositBtn.Text = "DEPOSIT";
+            this.DepositBtn.UseVisualStyleBackColor = false;
+            this.DepositBtn.Click += new System.EventHandler(this.DepositBtn_Click);
             // 
-            // textBox1
+            // AmountTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(292, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 33);
-            this.textBox1.TabIndex = 44;
+            this.AmountTb.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AmountTb.Location = new System.Drawing.Point(292, 176);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(255, 33);
+            this.AmountTb.TabIndex = 44;
+            this.AmountTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depositTb_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(156, 182);
+            this.label3.Location = new System.Drawing.Point(156, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 26);
             this.label3.TabIndex = 43;
@@ -132,7 +135,7 @@ namespace ATMApp
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(266, 113);
+            this.label2.Location = new System.Drawing.Point(273, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 29);
             this.label2.TabIndex = 11;
@@ -144,9 +147,9 @@ namespace ATMApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 407);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BackTxt);
+            this.Controls.Add(this.DepositBtn);
+            this.Controls.Add(this.AmountTb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -154,6 +157,7 @@ namespace ATMApp
             this.Name = "Deposit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deposit";
+            this.Load += new System.EventHandler(this.Deposit_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -164,12 +168,12 @@ namespace ATMApp
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ExitTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label BackTxt;
+        private System.Windows.Forms.Button DepositBtn;
+        private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
     }
