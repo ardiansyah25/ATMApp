@@ -77,6 +77,7 @@ namespace ATMApp
             this.WdBtn.TabIndex = 50;
             this.WdBtn.Text = "WITHDRAW";
             this.WdBtn.UseVisualStyleBackColor = false;
+            this.WdBtn.Click += new System.EventHandler(this.WdBtn_Click);
             // 
             // AmountTb
             // 
@@ -85,6 +86,7 @@ namespace ATMApp
             this.AmountTb.Name = "AmountTb";
             this.AmountTb.Size = new System.Drawing.Size(268, 33);
             this.AmountTb.TabIndex = 49;
+            this.AmountTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AmountTb_KeyPress);
             // 
             // label3
             // 

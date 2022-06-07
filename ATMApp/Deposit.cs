@@ -10,6 +10,7 @@ namespace ATMApp
 
         int oldBalance;
         string accNum = Login.AccNumber;
+        SqlConnection conn = Connection.getConn();
 
         public Deposit()
         {
@@ -48,7 +49,6 @@ namespace ATMApp
             {
                 try
                 {
-                    SqlConnection conn = Connection.getConn();
                     conn.Open();
                     int newBalance = oldBalance + Convert.ToInt32(AmountTb.Text);
                     string query = "update AccountTbl set Balance='"+newBalance+"' where Accnum= '"+accNum+"' ";
@@ -56,6 +56,10 @@ namespace ATMApp
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Success Deposit !");
                     conn.Close();
+
+                    MiniStatement miniStat = new MiniStatement();
+                    miniStat.addTransaction(AmountTb.Text, "Deposit");
+
                     Home home = new Home();
                     home.Show();
                     this.Hide();

@@ -54,5 +54,12 @@ namespace ATMApp
             wd.Show();
             this.Hide();
         }
+
+        private void FastCashBtn_Click(object sender, EventArgs e)
+        {
+            FastCash fastCash = new FastCash();
+            fastCash.Show();
+            this.Hide();
+        }
     }
 }

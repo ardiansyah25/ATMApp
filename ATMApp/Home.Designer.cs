@@ -34,7 +34,7 @@ namespace ATMApp
             this.label1 = new System.Windows.Forms.Label();
             this.DepositBtn = new System.Windows.Forms.Button();
             this.WdBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.FastCashBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.ChangePinBtn = new System.Windows.Forms.Button();
             this.BalanceBtn = new System.Windows.Forms.Button();
@@ -106,18 +106,19 @@ namespace ATMApp
             this.WdBtn.UseVisualStyleBackColor = false;
             this.WdBtn.Click += new System.EventHandler(this.WdBtn_Click);
             // 
-            // button3
+            // FastCashBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(38, 271);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 42);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "FAST CASH";
-            this.button3.UseVisualStyleBackColor = false;
+            this.FastCashBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.FastCashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FastCashBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FastCashBtn.ForeColor = System.Drawing.Color.White;
+            this.FastCashBtn.Location = new System.Drawing.Point(38, 271);
+            this.FastCashBtn.Name = "FastCashBtn";
+            this.FastCashBtn.Size = new System.Drawing.Size(218, 42);
+            this.FastCashBtn.TabIndex = 13;
+            this.FastCashBtn.Text = "FAST CASH";
+            this.FastCashBtn.UseVisualStyleBackColor = false;
+            this.FastCashBtn.Click += new System.EventHandler(this.FastCashBtn_Click);
             // 
             // button4
             // 
@@ -203,7 +204,7 @@ namespace ATMApp
             this.Controls.Add(this.BalanceBtn);
             this.Controls.Add(this.ChangePinBtn);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.FastCashBtn);
             this.Controls.Add(this.WdBtn);
             this.Controls.Add(this.DepositBtn);
             this.Controls.Add(this.panel1);
@@ -226,7 +227,7 @@ namespace ATMApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button DepositBtn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button FastCashBtn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button ChangePinBtn;
         private System.Windows.Forms.Button BalanceBtn;

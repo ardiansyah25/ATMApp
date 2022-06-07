@@ -30,18 +30,18 @@ namespace ATMApp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ExitTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BackTxt = new System.Windows.Forms.Label();
+            this.Fc10000Btn = new System.Windows.Forms.Button();
+            this.Fc5000Btn = new System.Windows.Forms.Button();
+            this.Fc2000Btn = new System.Windows.Forms.Button();
+            this.Fc1000Btn = new System.Windows.Forms.Button();
+            this.Fc500Btn = new System.Windows.Forms.Button();
+            this.Fc100Btn = new System.Windows.Forms.Button();
+            this.AvailableBalanceTxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,23 +49,35 @@ namespace ATMApp
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.ExitTxt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 100);
             this.panel1.TabIndex = 2;
             // 
-            // label6
+            // label2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(665, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 40);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "X";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(134, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(439, 40);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "ATM MANAGEMENT SYSTEM";
+            // 
+            // ExitTxt
+            // 
+            this.ExitTxt.AutoSize = true;
+            this.ExitTxt.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExitTxt.ForeColor = System.Drawing.Color.White;
+            this.ExitTxt.Location = new System.Drawing.Point(665, 7);
+            this.ExitTxt.Name = "ExitTxt";
+            this.ExitTxt.Size = new System.Drawing.Size(37, 40);
+            this.ExitTxt.TabIndex = 10;
+            this.ExitTxt.Text = "X";
+            this.ExitTxt.Click += new System.EventHandler(this.ExitTxt_Click);
             // 
             // label1
             // 
@@ -82,135 +94,131 @@ namespace ATMApp
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 479);
+            this.panel2.Location = new System.Drawing.Point(0, 499);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(709, 18);
             this.panel2.TabIndex = 18;
             // 
-            // label2
+            // BackTxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(134, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(439, 40);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ATM MANAGEMENT SYSTEM";
+            this.BackTxt.AutoSize = true;
+            this.BackTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BackTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.BackTxt.Location = new System.Drawing.Point(320, 432);
+            this.BackTxt.Name = "BackTxt";
+            this.BackTxt.Size = new System.Drawing.Size(66, 29);
+            this.BackTxt.TabIndex = 25;
+            this.BackTxt.Text = "Back";
+            this.BackTxt.Click += new System.EventHandler(this.BackTxt_Click);
             // 
-            // label5
+            // Fc10000Btn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label5.Location = new System.Drawing.Point(291, 432);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 29);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "LOGOUT";
+            this.Fc10000Btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Fc10000Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fc10000Btn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Fc10000Btn.ForeColor = System.Drawing.Color.White;
+            this.Fc10000Btn.Location = new System.Drawing.Point(436, 363);
+            this.Fc10000Btn.Name = "Fc10000Btn";
+            this.Fc10000Btn.Size = new System.Drawing.Size(218, 42);
+            this.Fc10000Btn.TabIndex = 24;
+            this.Fc10000Btn.Text = "Rp 10000";
+            this.Fc10000Btn.UseVisualStyleBackColor = false;
+            this.Fc10000Btn.Click += new System.EventHandler(this.Fc10000Btn_Click);
             // 
-            // button6
+            // Fc5000Btn
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(436, 363);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(218, 42);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Rs 10000";
-            this.button6.UseVisualStyleBackColor = false;
+            this.Fc5000Btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Fc5000Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fc5000Btn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Fc5000Btn.ForeColor = System.Drawing.Color.White;
+            this.Fc5000Btn.Location = new System.Drawing.Point(39, 363);
+            this.Fc5000Btn.Name = "Fc5000Btn";
+            this.Fc5000Btn.Size = new System.Drawing.Size(218, 42);
+            this.Fc5000Btn.TabIndex = 23;
+            this.Fc5000Btn.Text = "Rp 5000";
+            this.Fc5000Btn.UseVisualStyleBackColor = false;
+            this.Fc5000Btn.Click += new System.EventHandler(this.Fc5000Btn_Click);
             // 
-            // button5
+            // Fc2000Btn
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(39, 363);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(218, 42);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Rs 5000";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Fc2000Btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Fc2000Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fc2000Btn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Fc2000Btn.ForeColor = System.Drawing.Color.White;
+            this.Fc2000Btn.Location = new System.Drawing.Point(436, 289);
+            this.Fc2000Btn.Name = "Fc2000Btn";
+            this.Fc2000Btn.Size = new System.Drawing.Size(218, 42);
+            this.Fc2000Btn.TabIndex = 22;
+            this.Fc2000Btn.Text = "Rp 2000";
+            this.Fc2000Btn.UseVisualStyleBackColor = false;
+            this.Fc2000Btn.Click += new System.EventHandler(this.Fc2000Btn_Click);
             // 
-            // button4
+            // Fc1000Btn
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(436, 289);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 42);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Rs 2000";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Fc1000Btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Fc1000Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fc1000Btn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Fc1000Btn.ForeColor = System.Drawing.Color.White;
+            this.Fc1000Btn.Location = new System.Drawing.Point(39, 289);
+            this.Fc1000Btn.Name = "Fc1000Btn";
+            this.Fc1000Btn.Size = new System.Drawing.Size(218, 42);
+            this.Fc1000Btn.TabIndex = 21;
+            this.Fc1000Btn.Text = "Rp 1000";
+            this.Fc1000Btn.UseVisualStyleBackColor = false;
+            this.Fc1000Btn.Click += new System.EventHandler(this.Fc1000Btn_Click);
             // 
-            // button3
+            // Fc500Btn
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(39, 289);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 42);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Rs 1000";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Fc500Btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Fc500Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fc500Btn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Fc500Btn.ForeColor = System.Drawing.Color.White;
+            this.Fc500Btn.Location = new System.Drawing.Point(436, 215);
+            this.Fc500Btn.Name = "Fc500Btn";
+            this.Fc500Btn.Size = new System.Drawing.Size(218, 42);
+            this.Fc500Btn.TabIndex = 20;
+            this.Fc500Btn.Text = "Rp 500";
+            this.Fc500Btn.UseVisualStyleBackColor = false;
+            this.Fc500Btn.Click += new System.EventHandler(this.Fc500Btn_Click);
             // 
-            // button2
+            // Fc100Btn
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(436, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 42);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Rs 500";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Fc100Btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Fc100Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fc100Btn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Fc100Btn.ForeColor = System.Drawing.Color.White;
+            this.Fc100Btn.Location = new System.Drawing.Point(39, 215);
+            this.Fc100Btn.Name = "Fc100Btn";
+            this.Fc100Btn.Size = new System.Drawing.Size(218, 42);
+            this.Fc100Btn.TabIndex = 19;
+            this.Fc100Btn.Text = "Rp 100";
+            this.Fc100Btn.UseVisualStyleBackColor = false;
+            this.Fc100Btn.Click += new System.EventHandler(this.Fc100Btn_Click);
             // 
-            // button1
+            // AvailableBalanceTxt
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(39, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 42);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Rs 100";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(229, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(241, 29);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "AVAILABLE BALANCE";
+            this.AvailableBalanceTxt.AutoSize = true;
+            this.AvailableBalanceTxt.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AvailableBalanceTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.AvailableBalanceTxt.Location = new System.Drawing.Point(247, 161);
+            this.AvailableBalanceTxt.Name = "AvailableBalanceTxt";
+            this.AvailableBalanceTxt.Size = new System.Drawing.Size(213, 21);
+            this.AvailableBalanceTxt.TabIndex = 55;
+            this.AvailableBalanceTxt.Text = "AVAILABLE BALANCE: xxxx";
             // 
             // FastCash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 497);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(709, 517);
+            this.Controls.Add(this.AvailableBalanceTxt);
+            this.Controls.Add(this.BackTxt);
+            this.Controls.Add(this.Fc10000Btn);
+            this.Controls.Add(this.Fc5000Btn);
+            this.Controls.Add(this.Fc2000Btn);
+            this.Controls.Add(this.Fc1000Btn);
+            this.Controls.Add(this.Fc500Btn);
+            this.Controls.Add(this.Fc100Btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -218,6 +226,7 @@ namespace ATMApp
             this.Name = "FastCash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FastCash";
+            this.Load += new System.EventHandler(this.FastCash_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -228,17 +237,17 @@ namespace ATMApp
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ExitTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label BackTxt;
+        private System.Windows.Forms.Button Fc10000Btn;
+        private System.Windows.Forms.Button Fc5000Btn;
+        private System.Windows.Forms.Button Fc2000Btn;
+        private System.Windows.Forms.Button Fc1000Btn;
+        private System.Windows.Forms.Button Fc500Btn;
+        private System.Windows.Forms.Button Fc100Btn;
+        private System.Windows.Forms.Label AvailableBalanceTxt;
     }
 }
