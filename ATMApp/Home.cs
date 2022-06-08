@@ -61,5 +61,12 @@ namespace ATMApp
             fastCash.Show();
             this.Hide();
         }
+
+        private void MiniSBtn_Click(object sender, EventArgs e)
+        {
+            MiniStatement mini = new MiniStatement();
+            mini.Show();
+            this.Hide();
+        }
     }
 }

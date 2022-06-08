@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
+using System.Windows.Forms;
 
 namespace ATMApp
 {
@@ -40,8 +39,8 @@ namespace ATMApp
 
         private void DepositBtn_Click(object sender, EventArgs e)
         {
-         
-            if(AmountTb.Text == "" || Convert.ToInt32(AmountTb.Text) <= 0)
+
+            if (AmountTb.Text == "" || Convert.ToInt32(AmountTb.Text) <= 0)
             {
                 MessageBox.Show("Enter The Amount to Deposit");
             }

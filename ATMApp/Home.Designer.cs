@@ -35,7 +35,7 @@ namespace ATMApp
             this.DepositBtn = new System.Windows.Forms.Button();
             this.WdBtn = new System.Windows.Forms.Button();
             this.FastCashBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.MiniSBtn = new System.Windows.Forms.Button();
             this.ChangePinBtn = new System.Windows.Forms.Button();
             this.BalanceBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,11 +58,11 @@ namespace ATMApp
             // ExitTxt
             // 
             this.ExitTxt.AutoSize = true;
-            this.ExitTxt.Font = new System.Drawing.Font("Montserrat SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExitTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ExitTxt.ForeColor = System.Drawing.Color.White;
             this.ExitTxt.Location = new System.Drawing.Point(665, 7);
             this.ExitTxt.Name = "ExitTxt";
-            this.ExitTxt.Size = new System.Drawing.Size(37, 40);
+            this.ExitTxt.Size = new System.Drawing.Size(35, 33);
             this.ExitTxt.TabIndex = 10;
             this.ExitTxt.Text = "X";
             this.ExitTxt.Click += new System.EventHandler(this.ExitTxt_Click);
@@ -70,11 +70,11 @@ namespace ATMApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(118, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 40);
+            this.label1.Size = new System.Drawing.Size(419, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select your Transaction Please";
             // 
@@ -82,7 +82,7 @@ namespace ATMApp
             // 
             this.DepositBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.DepositBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DepositBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DepositBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DepositBtn.ForeColor = System.Drawing.Color.White;
             this.DepositBtn.Location = new System.Drawing.Point(38, 183);
             this.DepositBtn.Name = "DepositBtn";
@@ -96,7 +96,7 @@ namespace ATMApp
             // 
             this.WdBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.WdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WdBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WdBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WdBtn.ForeColor = System.Drawing.Color.White;
             this.WdBtn.Location = new System.Drawing.Point(435, 183);
             this.WdBtn.Name = "WdBtn";
@@ -110,7 +110,7 @@ namespace ATMApp
             // 
             this.FastCashBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.FastCashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FastCashBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FastCashBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FastCashBtn.ForeColor = System.Drawing.Color.White;
             this.FastCashBtn.Location = new System.Drawing.Point(38, 271);
             this.FastCashBtn.Name = "FastCashBtn";
@@ -120,24 +120,25 @@ namespace ATMApp
             this.FastCashBtn.UseVisualStyleBackColor = false;
             this.FastCashBtn.Click += new System.EventHandler(this.FastCashBtn_Click);
             // 
-            // button4
+            // MiniSBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(435, 271);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 42);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "MINI STATEMENT";
-            this.button4.UseVisualStyleBackColor = false;
+            this.MiniSBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.MiniSBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MiniSBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MiniSBtn.ForeColor = System.Drawing.Color.White;
+            this.MiniSBtn.Location = new System.Drawing.Point(435, 271);
+            this.MiniSBtn.Name = "MiniSBtn";
+            this.MiniSBtn.Size = new System.Drawing.Size(218, 42);
+            this.MiniSBtn.TabIndex = 14;
+            this.MiniSBtn.Text = "MINI STATEMENT";
+            this.MiniSBtn.UseVisualStyleBackColor = false;
+            this.MiniSBtn.Click += new System.EventHandler(this.MiniSBtn_Click);
             // 
             // ChangePinBtn
             // 
             this.ChangePinBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ChangePinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangePinBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ChangePinBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ChangePinBtn.ForeColor = System.Drawing.Color.White;
             this.ChangePinBtn.Location = new System.Drawing.Point(38, 363);
             this.ChangePinBtn.Name = "ChangePinBtn";
@@ -151,7 +152,7 @@ namespace ATMApp
             // 
             this.BalanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BalanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BalanceBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BalanceBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BalanceBtn.ForeColor = System.Drawing.Color.White;
             this.BalanceBtn.Location = new System.Drawing.Point(435, 363);
             this.BalanceBtn.Name = "BalanceBtn";
@@ -173,11 +174,11 @@ namespace ATMApp
             // LogoutTxt
             // 
             this.LogoutTxt.AutoSize = true;
-            this.LogoutTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LogoutTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LogoutTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.LogoutTxt.Location = new System.Drawing.Point(292, 438);
             this.LogoutTxt.Name = "LogoutTxt";
-            this.LogoutTxt.Size = new System.Drawing.Size(106, 29);
+            this.LogoutTxt.Size = new System.Drawing.Size(100, 25);
             this.LogoutTxt.TabIndex = 18;
             this.LogoutTxt.Text = "LOGOUT";
             this.LogoutTxt.Click += new System.EventHandler(this.LogoutTxt_Click);
@@ -185,11 +186,11 @@ namespace ATMApp
             // AccNumTxt
             // 
             this.AccNumTxt.AutoSize = true;
-            this.AccNumTxt.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AccNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AccNumTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.AccNumTxt.Location = new System.Drawing.Point(225, 115);
             this.AccNumTxt.Name = "AccNumTxt";
-            this.AccNumTxt.Size = new System.Drawing.Size(250, 29);
+            this.AccNumTxt.Size = new System.Drawing.Size(227, 25);
             this.AccNumTxt.TabIndex = 11;
             this.AccNumTxt.Text = "Account Number: xxxx";
             // 
@@ -203,7 +204,7 @@ namespace ATMApp
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.BalanceBtn);
             this.Controls.Add(this.ChangePinBtn);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.MiniSBtn);
             this.Controls.Add(this.FastCashBtn);
             this.Controls.Add(this.WdBtn);
             this.Controls.Add(this.DepositBtn);
@@ -228,7 +229,7 @@ namespace ATMApp
         private System.Windows.Forms.Button DepositBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button FastCashBtn;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button MiniSBtn;
         private System.Windows.Forms.Button ChangePinBtn;
         private System.Windows.Forms.Button BalanceBtn;
         private System.Windows.Forms.Panel panel2;

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ATMApp
@@ -20,7 +16,7 @@ namespace ATMApp
             InitializeComponent();
         }
 
-        public void addTransaction(string amount,string type)
+        public void addTransaction(string amount, string type)
         {
             try
             {
@@ -34,6 +30,34 @@ namespace ATMApp
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void populate()
+        {
+            conn.Open();
+            string query = "select * from TransactionTbl where AccNum = '"+accNum +"'";
+            SqlDataAdapter sda = new SqlDataAdapter(query,conn);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            MiniSDgv.DataSource = ds.Tables[0];
+            conn.Close();
+        }
+
+        private void BackTxt_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+        private void ExitTxt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MiniStatement_Load(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }
